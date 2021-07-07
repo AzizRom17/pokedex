@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #17141d;
+    color: #fff;
+}
+#pokedex{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap:12px;
+  padding: 10px 30px 30px 10px;
+}
+.title{
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+    color: #fff;
+}
+
+.poke-card{
+    height:400px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    border-radius: 16px;
+    background-color: #17141d;
+    box-shadow:-1rem 0 3rem #000;
+    transition: .2s;
+}
+.poke-card:hover{
+    transform: translateY(-1rem);
+}
+.poke-card:hover~.poke-card{
+    transform: translateX(130px);
+}
+.poke-card:not(:first-child){
+    margin-left: -130px;
+}
+.poke-image{
+    width: 140px;
+}
+#pokeball{
+    height: 60px;
+}
